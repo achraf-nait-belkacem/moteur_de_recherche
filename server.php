@@ -18,7 +18,7 @@ try {
         $stmt = $pdo->prepare("
             SELECT f.id, f.title, f.release_date, f.genre, f.director, i.image_url 
             FROM films f 
-            LEFT JOIN images i ON f.id = i.film_id 
+            LEFT JOIN images i ON f.id = i.film_id   
             WHERE f.title LIKE :search 
             LIMIT 10
         ");
