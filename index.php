@@ -1,34 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moteur de Recherche</title>
+    <title>Movie Search</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="search-container">
-        <h1>Moteur de Recherche</h1>
-        <form action="https://www.google.com/search" method="get">
-            <input type="text" name="q" class="search-bar" placeholder="Recherchez ici..." required>
-            <button type="submit" class="search-button">Rechercher</button>
-        </form>
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search for movies...">
+            <button type="button" id="searchButton" class="submit-btn">Search</button>
+        </div>
+        <div class="loader"></div>
+        <div id="searchResults" class="autocomplete-items"></div>
     </div>
+    <script src="script.js"></script>
 </body>
-
-<!-- Socket.IO Client (required) -->
-<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-
-<!-- Add Chat Widget -->
-<script src="https://chat-api-28qc.onrender.com/widget.js"></script>
-<script>
-    ChatWidget.init({
-        apiKey: 'LaplateformeKG',
-        position: 'bottom-left',
-        userData: {
-            username: 'John Doe',
-            userId: '123'
-        }
-    });
-</script>
 </html>
